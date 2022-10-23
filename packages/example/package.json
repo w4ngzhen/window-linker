@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "w4ngzhen",
   "license": "MIT",
+  "scripts": {
+    "run:child": "webpack-dev-server --config ./webpack.config.child.js --hot",
+    "run:parent": "webpack-dev-server --config ./webpack.config.parent.js --hot"
+  },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.74.0",

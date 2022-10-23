@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ParentPage</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #root {
+
+            padding: 10px;
+
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            background-color: antiquewhite;
+        }
+
+        .parent-area {
+            padding: 5px;
+            width: 60%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .btn-area {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .btn-area button {
+            width: 120px;
+            height: 100%;
+            margin-left: 10px;
+        }
+
+        .iframe-area {
+            padding: 5px;
+            width: 50%;
+            height: 100%;
+        }
+
+        .iframe-area iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<script>
+  function adjustFrameSize() {
+    const iframeAreaDiv = document.querySelector('.iframe-area');
+    const iframeEle = document.querySelector('#childIframe');
+    iframeEle.width = iframeAreaDiv.clientWidth;
+    iframeEle.height = iframeAreaDiv.clientHeight;
+  }
+</script>
+<div id="root">
+    <div class="parent-area">
+        <h1>Parent</h1>
+        <div class="btn-area">
+            <button id="loadIframeBtn">加载iframe</button>
+            <button id="openNewWindowBtn">打开新窗体</button>
+        </div>
+        <label for="actionNameInput">ActionName:</label>
+        <input id="actionNameInput"/>
+        <label for="data">Data（合法JSON会转换为对象传输）</label>
+        <textarea id="data" style="height: 100px"></textarea>
+        <button id="sendBtn" style="margin: 5px 0 5px 0">发送数据至Child</button>
+        <label for="responseData">响应数据</label>
+        <textarea id="responseData" style="height: 100px"></textarea>
+    </div>
+    <div class="iframe-area">
+        <!-- load iframe  -->
+    </div>
+</div>
+</body>
+</html>
