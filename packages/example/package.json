@@ -3,5 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "w4ngzhen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "window-linker": "1.0.0"
+  }
 }
