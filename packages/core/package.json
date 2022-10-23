@@ -1,0 +1,8 @@
+{
+  "name": "window-linker",
+  "version": "1.0.0",
+  "main": "dist/umd/window-linker.umd.js",
+  "author": "w4ngzhen",
+  "license": "MIT",
+  "private": false
+}
