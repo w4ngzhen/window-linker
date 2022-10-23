@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "../dist/es6",
+    "declaration": true,
+    "declarationDir": "../dist/types"
+  },
+  "include": [
+    "../src"
+  ]
+}

@@ -6,6 +6,9 @@
   "types": "dist/types/index.d.ts",
   "main": "dist/umd/window-linker.umd.js",
   "scripts": {
+    "build-es6": "tsc --project config/tsconfig.es6.json",
+    "build-umd": "webpack --config config/webpack.config.umd.js",
+    "build": "yarn build-es6 && yarn build-umd"
   },
   "devDependencies": {
     "typescript": "^4.8.4",
